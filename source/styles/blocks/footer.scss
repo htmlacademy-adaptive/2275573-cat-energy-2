@@ -1,0 +1,81 @@
+.footer {
+  background-color: $bg-color-secondary;
+}
+
+.footer__wrapper {
+  padding-block: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 38px;
+    padding-block: 43px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-block: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 70px;
+  }
+}
+
+.footer__logo {
+  width: 128px;
+  display: block;
+  margin: 0 auto 15px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 35px;
+  }
+}
+
+.footer__social {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 250px;
+    margin-bottom: 0;
+  }
+}
+
+.footer__developer {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
+
+  &::after {
+    content: "";
+    width: 27px;
+    height: 34px;
+    display: block;
+    mask-image: url("./../../icons/stack.svg#logo-htmlacademy");
+    background-color: #666666;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $bg-color-accent;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__developer-text {
+  font-size: 16px;
+  line-height: 20px;
+}

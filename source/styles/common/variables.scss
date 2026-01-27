@@ -1,1 +1,17 @@
-/* здесь используйте глобальные переменные */
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font:"Oswald", "Arial", sans-serif;
+
+$tablet-width: 768px;
+$desktop-width: 1280px;
+
+$color-text: #444444;
+$color-text-secondary: #000000;
+$color-text-accent: #ffffff;
+
+$bg-color: #ffffff;
+$bg-color-secondary: #f2f2f2;
+$bg-color-dark: #eaeaea;
+$border-color:#cdcdcd;
+$bg-color-accent: #68b738;
+$bg-color-accent-opacity: rgba($bg-color-accent, 0.85);
+$line-gradient: linear-gradient(90deg, #515055, #403f44);

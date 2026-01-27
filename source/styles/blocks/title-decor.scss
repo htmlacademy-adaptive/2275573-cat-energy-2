@@ -1,0 +1,41 @@
+.title-decor {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color-text-secondary;
+  position: relative;
+  width: fit-content;
+  padding-right: 40px;
+  background-color: $bg-color;
+
+  @media (max-width: ($tablet-width - 1px)) {
+    box-shadow: -40px 0 0 0 $bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    font-size: 40px;
+    line-height: 40px;
+    box-shadow: -40px 0 0 0$bg-color;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: $bg-color-accent;
+    box-shadow: 100vw 0 0 0 $bg-color-accent;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}

@@ -1,0 +1,154 @@
+.selection__form {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.selection__title {
+  margin-block: 27px 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-block: 65px 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-block: 74px 55px;
+  }
+}
+
+.selection__description {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  margin: 0 0 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.selection__form-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+}
+
+.selection__user-info {
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin: 0;
+  }
+}
+
+.selection__program-type {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 512px;
+    margin: 0;
+  }
+}
+
+.selection__contacts-info {
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.selection__comments {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 61px;
+  }
+}
+
+.selection__extra {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.selection__button-wrapper {
+  margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+    margin-bottom: 79px;
+  }
+}
+
+.selection__button {
+  @media (max-width: ($tablet-width - 1px)) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 284px;
+    min-height: 54px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 570px;
+  }
+}
+
+.selection__footnote {
+  display: block;
+
+  @media (max-width: ($tablet-width - 1px)) {
+    width: fit-content;
+    margin: 21px auto 32px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}

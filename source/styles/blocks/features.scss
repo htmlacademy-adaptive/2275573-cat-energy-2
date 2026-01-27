@@ -1,0 +1,131 @@
+.features {
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 46px;
+    border-bottom: 1px solid $bg-color-dark;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1280px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.features__title {
+  color: $color-text-secondary;
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0 0 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.features__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 49% 46%;
+    gap: 37px;
+    counter-reset: features__item 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 325px);
+    gap: 0;
+  }
+}
+
+.features__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $bg-color-accent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    max-width: 250px;
+    padding-top: 40px;
+    padding-bottom: 57px;
+    font-size: 16px;
+    line-height: 24px;
+    counter-increment: features__item 1;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
+
+    &::after {
+      content: counter(features__item);
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $bg-color-secondary;
+      z-index: -1;
+    }
+
+    &--nutrition {
+      width: 227px;
+    }
+
+    &--cooking {
+      width: 246px;
+    }
+
+    &--usage {
+      width: 247px;
+    }
+
+    &--time {
+      width: 249px;
+    }
+  }
+
+  &--nutrition::before {
+    background-image: url("./../../icons/stack.svg#icon-leaf");
+    background-size: 30px 32px;
+  }
+
+  &--cooking::before {
+    background-image: url("./../../icons/stack.svg#icon-water");
+    background-size: 26px 29px;
+  }
+
+  &--usage::before {
+    background-image: url("./../../icons/stack.svg#icon-eat");
+    background-size: 25px 30px;
+  }
+
+  &--time::before {
+    background-image: url("./../../icons/stack.svg#icon-watch");
+    background-size: 26px 50px;
+  }
+}

@@ -1,0 +1,53 @@
+.comments-form {
+  border: none;
+}
+
+.comments-form__title {
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+  }
+}
+
+.comments-form__input {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-text;
+  text-transform: uppercase;
+  width: 100%;
+  min-height: 150px;
+  padding: 14px 15px;
+  border: none;
+  outline: 1px solid #e7e7e7;
+
+  @media (min-width: $tablet-width) {
+    min-height: 175px;
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    outline: 1px solid $border-color;
+  }
+
+  &:focus {
+    outline: 2px solid $color-text;
+  }
+
+  &:invalid {
+    outline: 2px solid #ff8282;
+  }
+
+  &:disabled {
+    outline: 1px solid $border-color;
+    opacity: 0.3;
+  }
+}

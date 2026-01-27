@@ -1,0 +1,25 @@
+.main__promo {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+  }
+}
+
+.main__programs {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.main__features {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
+  }
+}

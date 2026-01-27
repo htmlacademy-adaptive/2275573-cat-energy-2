@@ -1,0 +1,44 @@
+.button {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: none;
+  display: block;
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.button--primary {
+  color: $color-text-accent;
+  background-color: $bg-color-accent;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--secondary {
+  color: $color-text;
+  background-color: $bg-color-secondary;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.7);
+  }
+}

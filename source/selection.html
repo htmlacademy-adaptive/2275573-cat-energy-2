@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b741650d-aeca-472d-a761-ce8550b60bb1&lang=ru_RU" defer></script>
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+  <header class="header header--inner container">
+    <a class="header__logo logo" href="index.html">
+      <picture>
+        <source media="(min-width:1280px)" srcset="./images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+        <source media="(min-width:768px)" srcset="./images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+        <img class="logo__img" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип">
+      </picture>
+      <picture>
+        <source media="(min-width:768px)" srcset="./images/logo-text-tablet.svg" width="101" height="18" type="image/svg+xml">
+        <img class="logo__text" src="./images/logo-text-mobile.svg" width="101" height="18" lang="en" alt="Cat Energy">
+      </picture>
+    </a>
+    <nav class="header__nav nav nav--nojs">
+      <button class="nav__toggle" type="button">
+        <span class="visually-hidden">Открыть/закрыть меню</span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--current" href="#" aria-current="page">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page__main container container--inner">
+    <section class="selection">
+      <h1 class="selection__title inner-title">Подбор программы</h1>
+      <p class="selection__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+      <form class="selection__form form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="selection__form-wrapper">
+          <fieldset class="selection__user-info user-form">
+            <legend class="visually-hidden">Пользовательская информация</legend>
+            <label class="user-form__label">Имя:*
+              <input class="user-form__input form__input" type="text" name="name" placeholder="Барсик" autocomplete="off" required>
+            </label>
+            <label class="user-form__label">Вес (кг):*
+              <input class="user-form__input form__input" type="number" name="weight" placeholder="7" required>
+            </label>
+            <label class="user-form__label">Возраст (лет):
+              <input class="user-form__input form__input" type="number" name="age" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="selection__program-type program-form">
+            <legend class="visually-hidden">Вид программы</legend>
+            <label class="program-form__label"><input class="program-form__input" type="radio" name="program" value="Похудение" checked>Похудение</label>
+            <label class="program-form__label"><input class="program-form__input" type="radio" name="program" value="Набор массы">Набор массы</label>
+            <label class="program-form__label"><input class="program-form__input" type="radio" name="program" value="Не знаю (Нужен ваш совет)">Не знаю (Нужен ваш совет)</label>
+          </fieldset>
+        </div>
+        <fieldset class="selection__contacts-info contacts-form">
+          <legend class="contacts-form__title title-decor">Контактные данные<br> (владельца кота)</legend>
+          <label class="contacts-form__label contacts-form__label--email">E-mail:*
+            <input class="contacts-form__input form__input" type="email" name="email" placeholder="kuklachev@gmail.com" autocomplete="off" required></label>
+          <label class="contacts-form__label contacts-form__label--phone">Телефон:*
+            <input class="contacts-form__input form__input" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required></label>
+        </fieldset>
+        <fieldset class="selection__comments comments-form">
+          <legend class="comments-form__title title-decor">Комментарий</legend>
+          <label for="comments"><span class="visually-hidden">Расскажите о своем коте</span></label>
+          <textarea class="comments-form__input" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="selection__extra extra-form">
+          <legend class="extra-form__title title-decor">Дополнительно</legend>
+          <label class="extra-form__label"><input class="extra-form__input" type="checkbox" name="Сахарозаменитель" checked>Сахарозаменитель</label>
+          <label class="extra-form__label"><input class="extra-form__input" type="checkbox" name="Питьевая вода">Питьевая вода</label>
+          <label class="extra-form__label"><input class="extra-form__input" type="checkbox" name="Молоко">Молоко</label>
+          <label class="extra-form__label"><input class="extra-form__input" type="checkbox" name="Витамины">Витамины</label>
+        </fieldset>
+        <div class="selection__button-wrapper">
+          <button class="selection__button button button--primary" type="submit">Отправить заявку</button>
+          <p class="selection__footnote">*— Обязательные поля</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class=" footer">
+    <div class="footer__contacts contacts">
+      <div class="contacts__wrapper contacts__wrapper--inner">
+        <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+        <address class="contacts__address">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span>Санкт-Петербург</span></address>
+      </div>
+      <div class="contacts__map" id="map">
+        <picture>
+          <source media="(min-width:1280px)" srcset="./images/maps/maps-desktop@1x.webp 1x, ./images/maps/maps-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
+          <source media="(min-width:1280px)" srcset="./images/maps/maps-desktop@1x.jpg 1x, ./images/maps/maps-desktop@2x.jpg 2x" width="1440" height="400" type="image/jpeg">
+          <source media="(min-width:660px)" srcset="./images/maps/maps-tablet@1x.webp 1x, ./images/maps/maps-tablet@2x.webp 2x" width="768" height="400" type="image/webp">
+          <source media="(min-width:660px)" srcset="./images/maps/maps-tablet@1x.jpg 1x, ./images/maps/maps-tablet@2x.jpg 2x" width="768" height="400" type="image/jpeg">
+          <source srcset="./images/maps/maps-mobile@1x.webp 1x, ./images/maps/maps-mobile@2x.webp 2x" type="image/webp" width="320" height="362">
+          <img class="contacts__map-img" src="./images/maps/maps-mobile@1x.jpg" srcset="./images/maps/maps-mobile@2x.jpg 2x" width="320" height="362" alt="Карта" loading="lazy">
+        </picture>
+      </div>
+    </div>
+    <div class="footer__wrapper container">
+      <a class="footer__logo logo" href="index.html">
+        <img class="logo__text logo__text--footer" src="./images/logo-text-mobile.svg" width="128" height="24" alt="Cat Energy">
+      </a>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Наша группа Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Наш канал на Youtube</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Наша группа Telegram</span>
+          </a>
+        </li>
+      </ul>
+      <a class="footer__developer" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
+        <span class="footer__developer-text">HTML Academy</span>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
