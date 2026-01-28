@@ -57,9 +57,3 @@
 .header--inner:has(.nav--nojs)::after {
   display: none;
 }
-
-.header--inner .logo__text {
-  @media (max-width: ($tablet-width - 1px)) {
-    margin-top: 5px;
-  }
-}

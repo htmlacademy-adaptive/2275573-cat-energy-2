@@ -36,6 +36,12 @@
   }
 }
 
+.header--inner .logo__text {
+  @media (max-width: ($tablet-width - 1px)) {
+    margin-top: 5px;
+  }
+}
+
 .logo__text--footer {
   width: 128px;
   height: 24px;

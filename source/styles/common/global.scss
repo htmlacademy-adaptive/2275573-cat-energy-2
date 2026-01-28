@@ -3,3 +3,40 @@
 *::after {
   box-sizing: border-box;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.container {
+  padding-inline: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-inline: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.container--inner {
+  @media (min-width: $tablet-width) {
+    padding-inline: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220;
+    padding-inline: 0;
+  }
+}
